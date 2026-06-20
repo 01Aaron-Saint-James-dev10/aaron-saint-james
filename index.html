@@ -6,142 +6,185 @@
 <title>Aaron Saint-James — Neuro-inclusion, accessibility & inclusive education</title>
 <meta name="description" content="Aaron Saint-James (he/him) — Founder of Simplifii, neuro-inclusion and inclusive-education researcher, lived-experience advocate. Building a world that works with every kind of mind.">
 <meta property="og:title" content="Aaron Saint-James">
-<meta property="og:description" content="Founder of Simplifii · Neuro-inclusion & inclusive-education researcher · Lived-experience advocate. Building a world that works with every kind of mind.">
+<meta property="og:description" content="Founder of Simplifii · Neuro-inclusion & inclusive-education researcher · Lived-experience advocate.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#534AB7">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23534AB7'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b0b12">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236c5ce7'/%3E%3Ctext x='16' y='22' font-family='-apple-system,Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
 <style>
   :root{
-    --ink:#1c1b22; --muted:#56535f; --soft:#7a7785;
-    --bg:#faf9fc; --card:#ffffff; --line:#e9e6f0;
-    --brand:#534ab7; --brand-2:#6c5ce7; --brand-soft:#efedfb;
-    --focus:#6c5ce7;
+    --ink:#10101a; --muted:#5b5a68; --soft:#8a8896;
+    --bg:#ffffff; --bg2:#f5f4f9; --line:#ececf3;
+    --brand:#6c5ce7; --brand-d:#5247c4; --brand-soft:#efeefc;
+    --ease:cubic-bezier(.16,1,.3,1);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Verdana,sans-serif;
-    font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--brand)}
-  .skip{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px;z-index:10}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"SF Pro Display",BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+  a{color:var(--brand);text-decoration:none}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+  .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--ink);padding:10px 16px;border-radius:10px;z-index:60}
   .skip:focus{left:12px;top:12px}
-  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
-  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
 
-  header.hero{padding:64px 0 28px;text-align:center}
-  .avatar{
-    width:104px;height:104px;border-radius:50%;margin:0 auto 22px;
-    background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;
-    font-size:34px;font-weight:700;letter-spacing:1px;
-    box-shadow:0 8px 30px rgba(83,74,183,.28);
-  }
-  h1{font-size:33px;line-height:1.15;margin:0 0 6px;letter-spacing:-.02em}
-  .pronoun{font-size:16px;font-weight:400;color:var(--soft)}
-  .role{color:var(--muted);font-size:17px;margin:0 0 22px}
-  .role b{color:var(--brand);font-weight:600}
-  blockquote{
-    margin:0 auto 30px;max-width:520px;font-size:19px;line-height:1.55;color:var(--ink);
-    font-style:italic;border-left:3px solid var(--brand);padding:6px 0 6px 16px;text-align:left;
-  }
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);
+    backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid rgba(0,0,0,.06)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
+  nav .nm{font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-.02em}
+  nav .nv{display:flex;gap:24px}
+  nav .nv a{color:var(--muted);font-size:15px;font-weight:500}
+  nav .nv a:hover{color:var(--ink)}
+  @media(max-width:520px){nav .nv{gap:16px}}
 
-  .links{display:grid;grid-template-columns:1fr;gap:12px;margin:0 0 8px}
-  @media(min-width:520px){.links{grid-template-columns:1fr 1fr}}
-  .lnk{
-    display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
-    border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);font-weight:500;
-    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-  }
-  .lnk:hover{transform:translateY(-2px);border-color:var(--brand);box-shadow:0 8px 24px rgba(83,74,183,.12)}
-  .lnk .ic{width:34px;height:34px;border-radius:9px;background:var(--brand-soft);color:var(--brand);
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
-  .lnk small{display:block;color:var(--soft);font-weight:400;font-size:13px}
+  .hero{position:relative;overflow:hidden;background:#0b0b12;color:#fff;text-align:center;
+    padding:104px 24px 116px}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(900px 480px at 50% -8%,rgba(108,92,231,.55),transparent 62%),
+               radial-gradient(700px 420px at 84% 116%,rgba(108,92,231,.22),transparent 60%);
+    opacity:.9}
+  .hero>*{position:relative}
+  .ava{width:120px;height:120px;border-radius:50%;margin:0 auto 30px;
+    background:linear-gradient(150deg,#7d70f0,#5247c4);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:40px;font-weight:700;letter-spacing:1px;
+    box-shadow:0 0 0 6px rgba(255,255,255,.06),0 24px 60px rgba(108,92,231,.45)}
+  h1{margin:0;font-size:clamp(44px,8.5vw,86px);font-weight:600;line-height:1.02;letter-spacing:-.035em}
+  h1 .pn{display:block;font-size:clamp(15px,2.4vw,20px);font-weight:400;color:#a9a7c4;letter-spacing:0;margin-top:14px}
+  .role{margin:22px auto 0;max-width:680px;font-size:clamp(17px,2.3vw,21px);color:#cfcde6;line-height:1.5}
+  .role b{color:#fff;font-weight:600}
+  .hquote{margin:34px auto 6px;max-width:760px;font-size:clamp(22px,3.6vw,34px);font-weight:500;
+    line-height:1.3;letter-spacing:-.02em;color:#fff}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;
+    padding:13px 26px;border-radius:980px;transition:transform .25s var(--ease),background .2s,box-shadow .25s}
+  .btn-1{background:var(--brand);color:#fff;box-shadow:0 10px 30px rgba(108,92,231,.5)}
+  .btn-1:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(108,92,231,.6)}
+  .btn-2{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)}
+  .btn-2:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
 
-  main{padding:14px 0 10px}
-  section{padding:26px 0;border-top:1px solid var(--line)}
-  h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft);margin:0 0 14px;font-weight:600}
-  p.lead{margin:0 0 10px;color:var(--muted)}
-  ul.clean{list-style:none;margin:0;padding:0}
-  ul.clean li{padding:10px 0;border-bottom:1px solid var(--line)}
-  ul.clean li:last-child{border-bottom:0}
-  .pub a{font-weight:500}
-  .pub span{display:block;color:var(--soft);font-size:14px}
-  .award{display:flex;gap:10px;align-items:flex-start;padding:8px 0}
-  .dot{color:var(--brand);flex:none;font-weight:700;margin-top:-2px}
+  section{padding:88px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--brand);margin:0 0 14px}
+  h2{font-size:clamp(28px,4.4vw,44px);font-weight:600;line-height:1.1;letter-spacing:-.03em;margin:0 0 8px}
+  .lead{font-size:clamp(19px,2.3vw,23px);color:var(--muted);max-width:760px;line-height:1.55}
+  .lead b{color:var(--ink);font-weight:600}
 
-  .access{background:var(--brand-soft);border-radius:14px;padding:16px 18px;color:#3c3489;font-size:15px;line-height:1.6;margin-top:8px}
-  footer{padding:30px 0 56px;text-align:center;color:var(--soft);font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .card{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);
+    border-radius:20px;padding:20px 22px;color:var(--ink);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(16,16,26,.10);border-color:#dad8ec}
+  .card .ic{width:46px;height:46px;border-radius:13px;background:var(--brand-soft);color:var(--brand);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex:none}
+  .card .t{font-weight:600;font-size:19px;letter-spacing:-.01em}
+  .card .s{color:var(--soft);font-size:15px}
+
+  .pubs{margin-top:34px;display:grid;gap:14px}
+  .pub{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:22px 24px;color:var(--ink);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .pub:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(16,16,26,.08)}
+  .pub .pt{font-weight:600;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+  .pub .pm{color:var(--soft);font-size:15px;margin-top:6px}
+  .pub .pl{color:var(--brand);font-size:14px;font-weight:600;margin-top:10px;display:inline-block}
+
+  .awards{margin-top:30px;display:grid;gap:2px}
+  .aw{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  .aw:last-child{border-bottom:0}
+  .aw .y{color:var(--brand);font-weight:700;flex:none;min-width:48px}
+
+  .access{margin-top:30px;background:var(--brand-soft);border-radius:20px;padding:24px 26px;color:#3c3489;
+    font-size:17px;line-height:1.6;max-width:780px}
+  footer{padding:56px 0 72px;text-align:center;color:var(--soft);font-size:15px;border-top:1px solid var(--line)}
   footer a{color:var(--brand)}
 
-  .reveal{opacity:0;transform:translateY(14px)}
-  .reveal.in{opacity:1;transform:none;transition:opacity .6s ease, transform .6s ease}
+  .reveal{opacity:0;transform:translateY(26px)}
+  .reveal.in{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
-    .lnk{transition:none}
+    .reveal,.btn,.card,.pub{transition:none!important}
+    .reveal{opacity:1;transform:none}
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="hero wrap">
-  <div class="avatar" aria-hidden="true">AS</div>
-  <h1>Aaron Saint-James <span class="pronoun">(he/him)</span></h1>
-  <p class="role"><b>Founder, Simplifii</b> &middot; neuro-inclusion &amp; inclusive-education researcher &middot; lived-experience advocate</p>
-  <blockquote>&ldquo;Building a world that works with every kind of mind.&rdquo;</blockquote>
+<nav aria-label="Primary">
+  <div class="wrap">
+    <span class="nm">Aaron Saint-James</span>
+    <div class="nv"><a href="#work">Work</a><a href="#connect">Connect</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="ava" aria-hidden="true">AS</div>
+  <h1>Aaron Saint-James<span class="pn">(he/him)</span></h1>
+  <p class="role"><b>Founder, Simplifii</b> &nbsp;·&nbsp; neuro-inclusion &amp; inclusive-education researcher &nbsp;·&nbsp; lived-experience advocate</p>
+  <p class="hquote">&ldquo;Building a world that works with every kind of mind.&rdquo;</p>
+  <div class="cta">
+    <a class="btn btn-1" href="#work">Explore my work</a>
+    <a class="btn btn-2" href="mailto:aaron@simplifii.com.au">Get in touch</a>
+  </div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main">
 
-  <nav class="links reveal" aria-label="Links">
-    <a class="lnk" href="https://simplifii.com.au"><span class="ic" aria-hidden="true">S</span><span>Simplifii<small>Neuro-inclusive study support</small></span></a>
-    <a class="lnk" href="https://www.linkedin.com/in/aaron-saint-james"><span class="ic" aria-hidden="true">in</span><span>LinkedIn<small>Connect with me</small></span></a>
-    <a class="lnk" href="https://github.com/01Aaron-Saint-James-dev10"><span class="ic" aria-hidden="true">&lt;/&gt;</span><span>GitHub<small>What I'm building</small></span></a>
-    <a class="lnk" href="https://linktr.ee/Neuro.Inc_Consultancy"><span class="ic" aria-hidden="true">&#9741;</span><span>Linktree<small>Everything in one place</small></span></a>
-    <a class="lnk" href="mailto:aaron@simplifii.com.au"><span class="ic" aria-hidden="true">@</span><span>Email me<small>aaron@simplifii.com.au</small></span></a>
-  </nav>
-
-  <section class="reveal">
-    <h2>About</h2>
-    <p class="lead">I'm a neurodivergent researcher, founder and advocate working at the intersection of accessibility, Universal Design for Learning and inclusive education. I founded <b style="color:var(--brand)">Simplifii</b> to give students with ADHD and dyslexia study support that works <em>with</em> how their minds work &mdash; and my research (Master of Research, UNSW Sydney) maps how universities can make inclusion real, not just stated.</p>
-    <p class="lead">Everything I do is grounded in lived experience and co-production: nothing about us, without us.</p>
+  <section id="connect" class="wrap">
+    <p class="eyebrow reveal">Connect</p>
+    <h2 class="reveal">Find me everywhere.</h2>
+    <div class="grid">
+      <a class="card reveal" href="https://simplifii.com.au"><span class="ic" aria-hidden="true">S</span><span><span class="t">Simplifii</span><br><span class="s">Neuro-inclusive study support</span></span></a>
+      <a class="card reveal" href="https://www.linkedin.com/in/aaron-saint-james"><span class="ic" aria-hidden="true">in</span><span><span class="t">LinkedIn</span><br><span class="s">Connect with me</span></span></a>
+      <a class="card reveal" href="https://github.com/01Aaron-Saint-James-dev10"><span class="ic" aria-hidden="true">&lt;/&gt;</span><span><span class="t">GitHub</span><br><span class="s">What I'm building</span></span></a>
+      <a class="card reveal" href="https://linktr.ee/Neuro.Inc_Consultancy"><span class="ic" aria-hidden="true">&#9741;</span><span><span class="t">Linktree</span><br><span class="s">Everything in one place</span></span></a>
+      <a class="card reveal" href="mailto:aaron@simplifii.com.au"><span class="ic" aria-hidden="true">@</span><span><span class="t">Email me</span><br><span class="s">aaron@simplifii.com.au</span></span></a>
+    </div>
   </section>
 
-  <section class="reveal">
-    <h2>Selected work</h2>
-    <ul class="clean">
-      <li class="pub"><a href="https://doi.org/10.1111/vox.70001">Understanding community perspectives for advancing inclusion of trans and gender-diverse people in blood donation in Australia</a><span>Thorpe, R., &hellip; Saint-James, A., et al. (2025). Vox Sanguinis, 120(5).</span></li>
-      <li class="pub"><a href="https://doi.org/10.3389/feduc.2024.1422089">Australia at an educational crossroads: Special schools and inclusive education</a><span>Cumming, T. M., Jolly, J. L., &amp; Saint-James, A. (2024). Frontiers in Education, 9.</span></li>
-      <li class="pub"><a href="https://doi.org/10.3389/feduc.2023.1329810">Diversified: Promoting co-production in course design and delivery</a><span>Cumming, T. M., Saint-James Bugge, A., et al. (2023). Frontiers in Education, 8.</span></li>
-      <li class="pub">The Inclusive Teaching Toolkit Roadmap<span>Cumming, T. M., Saint-James, A., et al. (2025). UNSW Sydney.</span></li>
-    </ul>
+  <section class="wrap">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="reveal">Designed by lived experience.</h2>
+    <p class="lead reveal" style="margin-top:18px">I'm a neurodivergent researcher, founder and advocate working where <b>accessibility, Universal Design for Learning and inclusive education</b> meet. I founded <b>Simplifii</b> to give students with ADHD and dyslexia study support that works <em>with</em> how their minds work — and my research (Master of Research, UNSW Sydney) maps how universities can make inclusion real, not just stated.</p>
+    <p class="lead reveal" style="margin-top:20px">Everything I build is grounded in lived experience and co-production: nothing about us, without us.</p>
   </section>
 
-  <section class="reveal">
-    <h2>Recognition</h2>
-    <div class="award"><span class="dot" aria-hidden="true">&#9670;</span><span>National Disability Research Partnership &mdash; Research Leadership Program, 1 of 14 selected nationally (2026)</span></div>
-    <div class="award"><span class="dot" aria-hidden="true">&#9670;</span><span>ADCET Accessibility in Action Award (2026)</span></div>
-    <div class="award"><span class="dot" aria-hidden="true">&#9670;</span><span>UN SDG Global Citizenship Award, APRU (2025)</span></div>
-    <div class="award"><span class="dot" aria-hidden="true">&#9670;</span><span>ADA Audacious Vision: Dean's Award, UNSW Arts, Design &amp; Architecture (2024)</span></div>
+  <section id="work" class="wrap">
+    <p class="eyebrow reveal">Selected work</p>
+    <h2 class="reveal">Research that moves the sector.</h2>
+    <div class="pubs">
+      <a class="pub reveal" href="https://doi.org/10.1111/vox.70001"><span class="pt">Understanding community perspectives for advancing inclusion of trans and gender-diverse people in blood donation in Australia</span><div class="pm">Thorpe, R., … Saint-James, A., et al. (2025). Vox Sanguinis, 120(5).</div><span class="pl">Read the article →</span></a>
+      <a class="pub reveal" href="https://doi.org/10.3389/feduc.2024.1422089"><span class="pt">Australia at an educational crossroads: Special schools and inclusive education</span><div class="pm">Cumming, T. M., Jolly, J. L., &amp; Saint-James, A. (2024). Frontiers in Education, 9.</div><span class="pl">Read the article →</span></a>
+      <a class="pub reveal" href="https://doi.org/10.3389/feduc.2023.1329810"><span class="pt">Diversified: Promoting co-production in course design and delivery</span><div class="pm">Cumming, T. M., Saint-James Bugge, A., et al. (2023). Frontiers in Education, 8.</div><span class="pl">Read the article →</span></a>
+      <div class="pub reveal"><span class="pt">The Inclusive Teaching Toolkit Roadmap</span><div class="pm">Cumming, T. M., Saint-James, A., et al. (2025). UNSW Sydney.</div></div>
+    </div>
   </section>
 
-  <p class="access reveal">I'm dyslexic and AuDHD. I do my best to catch errors, but some slip through, and my reply time can vary with cognitive load &mdash; thank you for your patience.</p>
+  <section class="wrap">
+    <p class="eyebrow reveal">Recognition</p>
+    <h2 class="reveal">Honoured along the way.</h2>
+    <div class="awards reveal">
+      <div class="aw"><span class="y">2026</span><span>National Disability Research Partnership — Research Leadership Program, <b>1 of 14 selected nationally</b></span></div>
+      <div class="aw"><span class="y">2026</span><span>ADCET Accessibility in Action Award</span></div>
+      <div class="aw"><span class="y">2025</span><span>UN SDG Global Citizenship Award, APRU</span></div>
+      <div class="aw"><span class="y">2024</span><span>ADA Audacious Vision: Dean's Award, UNSW Arts, Design &amp; Architecture</span></div>
+    </div>
+    <p class="access reveal">I'm dyslexic and AuDHD. I do my best to catch errors, but some slip through, and my reply time can vary with cognitive load — thank you for your patience.</p>
+  </section>
 
 </main>
 
-<footer class="wrap">
-  <p>Aaron Saint-James (he/him) &middot; <a href="mailto:aaron@simplifii.com.au">aaron@simplifii.com.au</a><br><span id="yr"></span> &middot; Built to be accessible.</p>
+<footer>
+  <div class="wrap">Aaron Saint-James (he/him) &nbsp;·&nbsp; <a href="mailto:aaron@simplifii.com.au">aaron@simplifii.com.au</a><br><span id="yr"></span> &nbsp;·&nbsp; Built to be accessible.</div>
 </footer>
 
 <script>
   (function(){
     var y=document.getElementById('yr'); if(y){y.textContent=new Date().getFullYear();}
-    var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var els = document.querySelectorAll('.reveal');
-    if(rm || !('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+    var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.14});
     els.forEach(function(e){io.observe(e);});
   })();
 </script>
